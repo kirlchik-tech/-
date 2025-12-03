@@ -4,18 +4,6 @@
         padding-right: 16px;
     }
     
-
-    .menu {
-        position: fixed !important; 
-        left: 0;
-        width: 100%;
-        background: $colorwhite; 
-        z-index: 1000;
-        padding: 15px 0;
-        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-        display: flex !important;
-    }
-    
     
     body {
         padding-top: 70px;
@@ -27,13 +15,26 @@
         padding-bottom: 60px;
         margin-top: 0; 
     }
+
     
-    .menu-container {
+    .menu {
+        position: fixed !important; 
+        left: 0;
+        width: 100%;
+        background: $colorwhite; 
+        z-index: 1000;
+        padding: 15px 0;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        display: flex !important;
+    
+    &-container {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         padding: 0 16px;
         width: 100%;
+    }
+
     }
     
     .title-text {
@@ -52,13 +53,15 @@
         margin-top: 20px;
         text-align: center;
     }
+
+    .main{
     
-    .main-texts {
+    &-texts {
         width: 100%;
         text-align: center;
     }
     
-    .main-texts__title {
+    &-texts__title {
         font-size: 32px;
         line-height: 38px;
         padding-top: 20px; /* уменьшил, т.к. body уже имеет padding-top */
@@ -67,7 +70,7 @@
         max-width: 100%;
     }
     
-    .main-texts__subtitle {
+    &-texts__subtitle {
         font-size: 20px;
         line-height: 24px;
         padding-top: 16px;
@@ -76,7 +79,7 @@
         max-width: 100%;
     }
     
-    .main-texts__text {
+    &-texts__text {
         font-size: 14px;
         line-height: 18px;
         text-align: center;
@@ -84,12 +87,21 @@
         margin: 12px auto;
     }
     
-    .main-texts__button {
+    &-texts__button {
         width: 100%;
         max-width: 300px;
         margin: 30px auto 0;
     }
-    
+
+
+    &-section {
+    width: 300px !important;
+    height: 580px !important;
+    display: block !important;
+    margin-bottom: 16px !important;
+    }
+
+    }
  
     .header-images {
         display: none;
@@ -101,21 +113,13 @@
     display: block !important;
    }
 
-   .main-section {
-    width: 300px !important;
-    height: 580px !important;
-    display: block !important;
-    margin-bottom: 16px !important;
-   }
+   
 
     .catalog {
         height: auto;
-        padding: 40px 0;
-    }
-
-
+        padding: 40px 0;   
     
-    .catalog-tittles {
+    &-tittles {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -123,13 +127,13 @@
         gap: 20px;
     }
     
-    .catalog-tittles__tittle {
+    &-tittles__tittle {
         font-size: 32px;
         line-height: 39px;
         justify-content: center;
     }
     
-    .catalog-buttons {
+    &-buttons {
         display: flex;
         justify-content: center;
         gap: 8px;
@@ -138,7 +142,7 @@
         max-width: 300px;
     }
     
-    .catalog-buttons__button {
+    &-buttons__button {
         width: 95px;
         height: 38px;
         padding: 10px 16px;
@@ -146,7 +150,7 @@
         border-radius: 20px;
     }
     
-    .catalog-choices {
+    &-choices {
         display: grid !important;
         grid-template-columns: 1fr;
         gap: 20px;
@@ -156,14 +160,14 @@
         overflow: hidden !important;
     }
 
-    .catalog-choices.active {
+    &-choices.active {
     opacity: 1 !important;
      height: auto !important;
      overflow: visible !important;
      display: grid !important;
     }
     
-    .catalog-choice {
+    &-choice {
         width: 100%;
         max-width: 300px;
         height: auto;
@@ -171,23 +175,23 @@
         padding: 0 0 20px 0;
     }
     
-    .catalog-choice__img {
+    &-choice__img {
         width: 100%;
         height: 180px;
         border-radius: 16px 16px 0 0;
     }
     
-    .catalog-text {
+    &-text {
         padding: 15px;
         gap: 8px;
     }
     
-    .catalog-text__price {
+    &-text__price {
         font-size: 22px;
         line-height: 26px;
     }
     
-    .catalog-text__description {
+    &-text__description {
         height: auto;
         min-height: 34px;
         font-size: 14px;
@@ -197,13 +201,13 @@
         overflow: hidden;
     }
     
-    .catalog-text__volume {
+    &-text__volume {
         font-size: 13px;
         line-height: 16px;
     }
     
     
-    .catalog-choice:hover {
+    &-choice:hover {
         transform: none;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
@@ -212,14 +216,17 @@
         transform: none;
     }
 
-    .catalog-choices.active {
+    &-choices.active {
         display: grid !important;
+    }
+
     }
     
     /* Блок "Отзывы" - мобильная версия */
     .reviews-card{
         display: none;
     }
+
     .searching {
         padding: 40px 16px;
         background: $colorlightwhite;
@@ -296,20 +303,19 @@
         padding: 20px;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
 
-    .resrvations-head__tittle {
+    &-head__tittle {
         font-size: 20px;
         line-height: 24px;
         text-align: center;
         margin-bottom: 0;
     }
 
-    .resrvations-form {
+    &-form {
         gap: 12px;
     }
 
-    .resrvations__item {
+    &__item {
         width: 100% !important;
         max-width: 300px;
         height: 44px;
@@ -318,19 +324,20 @@
         line-height: 17px;
     }
 
-    .resrvations-buttons {
+    &-buttons {
         width: 100%;
         margin-top: 10px;
         top: 0;
     }
 
-    .resrvations-buttons__button {
+    &-buttons__button {
         width: 100% !important;
         max-width: 300px;
         height: 44px;
         padding: 12px 20px;
         font-size: 14px;
         line-height: 17px;
+    }
     }
 
     /* Карта - мобильная версия */
@@ -370,13 +377,15 @@
         padding: 30px 16px;
     }
 
-    .end-tittles {
+    .end{
+
+    &-tittles {
         padding-top: 0;
         text-align: center;
         margin-bottom: 20px;
     }
 
-    .end-tittles__tittle {
+    &-tittles__tittle {
         font-size: 24px;
         line-height: 29px;
         justify-content: center;
@@ -384,14 +393,14 @@
         margin-bottom: 10px;
     }
 
-    .end-tittles__text {
+    &-tittles__text {
         font-size: 12px;
         line-height: 15px;
         justify-content: center;
         text-align: center;
     }
 
-    .end-menu {
+    &-menu {
         position: static;
         flex-wrap: wrap;
         justify-content: center;
@@ -399,26 +408,27 @@
         margin-bottom: 20px;
     }
 
-    .end-menu__item {
+    &-menu__item {
         font-size: 12px;
         line-height: 15px;
     }
 
-    .end-menu__item:nth-child(3) {
+    &-menu__item:nth-child(3) {
        display: none;
     }
 
-    .end-messangers {
+    &-messangers {
         position: static;
         justify-content: center;
         gap: 12px;
     }
 
-    .end-messangers__svg {
+    &-messangers__svg {
         width: 32px;
         height: 32px;
         border-radius: 6px;
         padding: 6px;
+    }
     }
 
 }
