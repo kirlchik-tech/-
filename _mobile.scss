@@ -1,0 +1,424 @@
+@media(max-width: 768px){
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+
+    .menu {
+        position: fixed !important; 
+        left: 0;
+        width: 100%;
+        background: $colorwhite; 
+        z-index: 1000;
+        padding: 15px 0;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        display: flex !important;
+    }
+    
+    
+    body {
+        padding-top: 70px;
+        overflow-x: hidden;
+    }
+    
+    .header-up {
+        height: auto;
+        padding-bottom: 60px;
+        margin-top: 0; 
+    }
+    
+    .menu-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        width: 100%;
+    }
+    
+    .title-text {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    /* Скрываем десктопное меню и кнопку на мобильных */
+    .points,
+    .menu-buttons {
+        display: none !important;
+    }
+    
+    /* Основной контент */
+    .header-main {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .main-texts {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .main-texts__title {
+        font-size: 32px;
+        line-height: 38px;
+        padding-top: 20px; /* уменьшил, т.к. body уже имеет padding-top */
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .main-texts__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .main-texts__text {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        max-width: 100%;
+        margin: 12px auto;
+    }
+    
+    .main-texts__button {
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto 0;
+    }
+    
+ 
+    .header-images {
+        display: none;
+    }
+
+    
+    
+   .main-sections {
+    display: block !important;
+   }
+
+   .main-section {
+    width: 300px !important;
+    height: 580px !important;
+    display: block !important;
+    margin-bottom: 16px !important;
+   }
+
+    .catalog {
+        height: auto;
+        padding: 40px 0;
+    }
+
+
+    
+    .catalog-tittles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+    
+    .catalog-tittles__tittle {
+        font-size: 32px;
+        line-height: 39px;
+        justify-content: center;
+    }
+    
+    .catalog-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .catalog-buttons__button {
+        width: 95px;
+        height: 38px;
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    
+    .catalog-choices {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+        opacity: 0 !important;
+        min-height: 0px !important;;
+        overflow: hidden !important;
+    }
+
+    .catalog-choices.active {
+    opacity: 1 !important;
+     height: auto !important;
+     overflow: visible !important;
+     display: grid !important;
+    }
+    
+    .catalog-choice {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        padding: 0 0 20px 0;
+    }
+    
+    .catalog-choice__img {
+        width: 100%;
+        height: 180px;
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .catalog-text {
+        padding: 15px;
+        gap: 8px;
+    }
+    
+    .catalog-text__price {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    
+    .catalog-text__description {
+        height: auto;
+        min-height: 34px;
+        font-size: 14px;
+        line-height: 17px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .catalog-text__volume {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    
+    
+    .catalog-choice:hover {
+        transform: none;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .catalog-choice:hover .catalog-choice__img {
+        transform: none;
+    }
+
+    .catalog-choices.active {
+        display: grid !important;
+    }
+    
+    /* Блок "Отзывы" - мобильная версия */
+    .reviews-card{
+        display: none;
+    }
+    .searching {
+        padding: 40px 16px;
+        background: $colorlightwhite;
+    }
+
+    .search-head {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .search-head__tittle {
+        font-size: 32px;
+        line-height: 39px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .left-column {
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* Контакты - мобильная версия */
+    .search {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .contacts-head__tittle {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contacts_block {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .contacts__item {
+        font-size: 14px;
+        line-height: 17px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .number {
+        left: -14px;
+    }
+
+    /* Бронирование - мобильная версия */
+    .resrvations {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .resrvations-head__tittle {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .resrvations-form {
+        gap: 12px;
+    }
+
+    .resrvations__item {
+        width: 100% !important;
+        max-width: 300px;
+        height: 44px;
+        padding: 12px 20px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .resrvations-buttons {
+        width: 100%;
+        margin-top: 10px;
+        top: 0;
+    }
+
+    .resrvations-buttons__button {
+        width: 100% !important;
+        max-width: 300px;
+        height: 44px;
+        padding: 12px 20px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    /* Карта - мобильная версия */
+    .maps {
+        width: 100% !important;
+        max-width: 340px;
+        height: 250px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        margin: 0 auto;
+    }
+
+    /* Если карта внутри right-column, добавьте: */
+    .right-column {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    /* Иконки - адаптация */
+    .contacts_block-svg__up,
+    .contacts_block-svg__bottom,
+    .contacts_block-svg__mail,
+    .contacts_block-svg__adr {
+        flex-shrink: 0;
+    }
+
+    .contacts_block-svg__bottom {
+       left: -14px;
+       top: 4px;
+    }
+
+    /* Футер - мобильная версия */
+    .footer {
+        width: 100%;
+        height: auto;
+        padding: 30px 16px;
+    }
+
+    .end-tittles {
+        padding-top: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .end-tittles__tittle {
+        font-size: 24px;
+        line-height: 29px;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .end-tittles__text {
+        font-size: 12px;
+        line-height: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .end-menu {
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .end-menu__item {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .end-menu__item:nth-child(3) {
+       display: none;
+    }
+
+    .end-messangers {
+        position: static;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .end-messangers__svg {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        padding: 6px;
+    }
+
+}

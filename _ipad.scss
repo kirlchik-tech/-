@@ -1,0 +1,364 @@
+@media (min-width: 769px) and (max-width: 1200px) {
+    .center {
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+    }
+    
+    body {
+        padding-top: 80px;
+        font-size: 15px;
+    }
+    
+    /* Меню фиксированное */
+    .menu {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0;
+        width: 100%;
+        background: $colorwhite; 
+        z-index: 1000;
+        padding: 18px 0;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        display: flex !important;
+    }
+    
+    .menu-container {
+        padding: 0 32px;
+        max-width: 100%;
+        gap: 32px;
+        justify-content: normal;
+    }
+    
+    .title-text {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    
+    /* Навигация */
+    .points {
+        gap: 24px;
+        margin-left: 30px;
+    }
+    
+    .points-item {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    
+    .menu-buttons__button {
+        width: 140px;
+        height: 46px;
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+    
+    /* Заголовок - текст по центру, без картинок */
+    .header-up {
+        height: 500px;
+        padding-bottom: 40px;
+        position: relative;
+    }
+    
+    .header-up::before {
+        height: 100px;
+    }
+    
+    .header-up::after {
+        top: 100px;
+    }
+    
+    .header-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    /* Скрываем все картинки на заголовке */
+    .header-main__board,
+    .header-main__Cinnamon,
+    .header-main__Cookie,
+    .header-main__CoffeCup,
+    .header-main__CoffeBeans {
+        display: none !important;
+    }
+    
+    .main-texts {
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-texts__title {
+        padding-top: 60px;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        max-width: 100%;
+        justify-content: center;
+    }
+    
+    .main-texts__subtitle {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        max-width: 100%;
+        justify-content: center;
+    }
+    
+    .main-texts__text {
+        font-size: 15px;
+        line-height: 19px;
+        text-align: center;
+        max-width: 100%;
+        margin: 8px auto;
+        justify-content: center;
+    }
+    
+    .main-texts__button {
+        width: 280px;
+        height: 48px;
+        padding: 14px 32px;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    
+    /* История "О нас" - 4 ряда через flexbox */
+    .main {
+        padding: 60px 0;
+    }
+    
+    .main-tittles__tittle {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 40px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .main-sections {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+    
+    /* 4 ряда - каждый ряд это flex контейнер */
+    .main-section-row {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    /* Для 4 рядов - на планшете возможно только 1 карточка в ряд */
+    .main-section {
+        width: 100% !important;
+        max-width: 100%;
+        height: 260px !important;
+        margin-bottom: 0;
+        display: flex !important;
+    }
+    
+    /* Если нужно именно 4 карточки в 4 ряда */
+    .main-section:nth-child(1),
+    .main-section:nth-child(2),
+    .main-section:nth-child(3),
+    .main-section:nth-child(4) {
+        width: 100%;
+        height: 240px;
+        margin-bottom: 20px;
+    }
+    
+    .main-section__content {
+        width: 60%;
+        padding: 20px;
+    }
+    
+    .main-section__title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .main-section__text {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    
+    .main-sections__img {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Альтернатива: 2 колонки по 2 ряда (если карточек 4) */
+    .main-sections-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .main-sections-grid .main-section {
+        height: 280px;
+    }
+    
+    /* Для адаптации контента внутри карточек */
+    .main-section__text_2,
+    .main-section__text_3,
+    .main-section__text_4 {
+        max-width: 100%;
+    }
+    
+    /* Каталог для планшета */
+    .catalog-tittles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+    
+    .catalog-tittles__tittle {
+        font-size: 36px;
+        line-height: 44px;
+        justify-content: center;
+    }
+    
+    .catalog-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .catalog-buttons__button {
+        width: 100px;
+        height: 40px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    .catalog-choices {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    
+    .catalog-choice {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Контакты и карта для планшета */
+    .searching {
+        padding: 60px 32px;
+    }
+
+
+    .search-head {
+        width: auto;
+    }
+    
+    .search-head__tittle {
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+    }
+    
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .left-column {
+        width: 100%;
+    }
+    
+    .search,
+    .resrvations {
+        width: 100% !important;
+    }
+
+    .resrvations {
+      align-items: center;
+    }
+
+    .resrvations-form {
+      align-items: center;
+    }
+
+    
+   .resrvations-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }      
+    
+    .maps {
+        width: 100% !important;
+        height: 350px !important;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contacts-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .contacts_block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15.5px;
+    justify-content: center;
+    }
+
+    .footer {
+        height: auto;
+    }
+    
+    /* Отзывы для планшета */
+
+    .reviews-header__tittle {
+        justify-content: center;
+    }
+
+    .reviews-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .reviews-section {
+        width: 363px;
+    }
+
+    .end-menu {
+      bottom: 77px;
+      left: 304px;
+    }
+
+    .end-messangers {
+      right: -610px;
+      bottom: 53px;
+    }
+
+    .end-messangers__svg {
+       width: 44px;
+       height: 44px;
+       border-radius: 12px;
+    }
+}
+
